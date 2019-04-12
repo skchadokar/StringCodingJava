@@ -18,10 +18,10 @@ private void getIndexOfPatternInGivenString(String aPrefix, String aPattn, Strin
 		int n = aPattn.length();
 		if (n == 0 && aInString.indexOf(aPrefix)>-1 ) {
 			iIndexOfPattern =aInString.indexOf(aPrefix);
-		    permutation(null, null,null);
+		        getIndexOfPatternInGivenString(null, null,null);
 		    } else {
 		        for (int i = 0; i < n; i++) {
-		            permutation(aPrefix + aPattn.charAt(i), aPattn.substring(0, i) + aPattn.substring(i+1, n),aInString);
+		            getIndexOfPatternInGivenString(aPrefix + aPattn.charAt(i), aPattn.substring(0, i) + aPattn.substring(i+1, n),aInString);
 		        }
 		   }
 		
