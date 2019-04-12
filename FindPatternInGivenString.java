@@ -6,7 +6,7 @@ public class FindPatternInGivenString{
 static int iIndexOfPattern=-1;
   public static void main (String [] arg){
     String mInputString = "XYZCDFGABHKERYT";	
-		String mSearchPattrn= "ABCDFGHK";
+    String mSearchPattrn= "ABCDFGHK";
     new FindPatternInGivenString().getIndexOfPatternInGivenString("",mInputString,mSearchPattrn);
     System.out.println(iIndexOfPattern);
   }
