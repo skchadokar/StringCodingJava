@@ -11,7 +11,7 @@ static int iIndexOfPattern=-1;
     System.out.println(iIndexOfPattern);
   }
 
-private void permutation(String aPrefix, String aPattn, String aInString) {
+private void getIndexOfPatternInGivenString(String aPrefix, String aPattn, String aInString) {
 		 if(aPrefix==null && aPattn==null && aInString==null) {
 			 return;
 		 }
