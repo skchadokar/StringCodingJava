@@ -3,19 +3,19 @@ public class StringPermutation {
 
 	public static void main(String[] args) {
 		
-		String input ="top";
-		String input2 ="pot";
-    //check null and empty
-		helper("",input,input2);
+		String mInput ="top";
+		String mInput2 ="pot";
+		//check empty and null
+		helper("",mInput,mInput2);
 	}
 
-	private static void helper(String prefix, String input,String input2) {
+	private static void helper(String aPrefix, String aInput,String aInput2) {
 		
-		if(input.length()==0  && prefix.equals(input2)) {
-			System.out.println(prefix);
+		if(aInput.length()==0  && aPrefix.equals(aInput2)) {
+			System.out.println(aPrefix);
 		}else {
-			for(int i=0;i<input.length();i++) {
-				helper( prefix+input.charAt(i), input.substring(0, i)+input.substring(i+1),input2);
+			for(int i=0;i<aInput.length();i++) {
+				helper( aPrefix+aInput.charAt(i), aInput.substring(0, i)+aInput.substring(i+1),aInput2);
 				
 			}
 		}
