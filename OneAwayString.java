@@ -15,14 +15,16 @@ public class OneAwayString {
 		String s1="pale";
 		String s2="bale";
 		int i=0;
-		while(i<s1.length()) {
-			if(s2.indexOf(s1.charAt(i))>-1) {
-				s2= s2.replace(s1.charAt(i)+"", "");
-				s1 = s1.replace(s1.charAt(i)+"", "");
+		StringBuilder sb1 = new StringBuilder(s1);
+		StringBuilder sb2 = new StringBuilder(s2);
+		while(i<sb1.length()) {
+			if(sb2.indexOf(sb1.charAt(i)+"")>-1) {
+				sb2= sb2.deleteCharAt(sb2.indexOf(sb1.charAt(i)+""));
+				sb1= sb1.deleteCharAt(sb1.indexOf(sb1.charAt(i)+""));
 			}else {
 				i++;
 			}
 		}
-		System.out.println(s1.length()<2 && s2.length()<2);
+		System.out.println(sb1.length()<2 && sb2.length()<2);
 	}
 }
